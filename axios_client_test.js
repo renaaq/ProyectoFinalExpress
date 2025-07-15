@@ -12,7 +12,7 @@ const getAllBooks = async () => {
 
 getAllBooks();
 
-// TAREA 11 - Get book by ISBN using Promises
+
 const getBookByISBN = (isbn) => {
     axios.get(`http://localhost:5000/isbn/${isbn}`)
         .then(response => {
@@ -23,7 +23,7 @@ const getBookByISBN = (isbn) => {
         });
 };
 
-getBookByISBN("1");  // Cambia "1" por un ISBN válido si hace falta
+getBookByISBN("1");
 
 
 // TAREA 12 - Get books by author using async/await
@@ -36,10 +36,9 @@ const getBooksByAuthor = async (author) => {
     }
 };
 
-getBooksByAuthor("Unknown"); // Cambia por uno que esté en tu base
+getBooksByAuthor("Unknown");
 
 
-// TAREA 13 - Get books by title using Promises
 const getBooksByTitle = (title) => {
     axios.get(`http://localhost:5000/title/${title}`)
         .then(response => {
@@ -50,4 +49,4 @@ const getBooksByTitle = (title) => {
         });
 };
 
-getBooksByTitle("Things Fall Apart");  // Cambia por un título válido si hace falta
+getBooksByTitle("Things Fall Apart"); 
